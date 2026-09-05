@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Data pipeline working data (large, regenerable, and — for the current
+# placeholder corpus — not confirmed clean-license, so it must not be
+# redistributed via git regardless of size)
+data-pipeline/raw/
+data-pipeline/processed/
+data-pipeline/embeddings/
+data-pipeline/samples/
+data-pipeline/*.log
+data-pipeline/*_log.txt
+
+# Node
+node_modules/
+webapp/dist/
+webapp/dist-ssr/
+*.local
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local-only planning notes, not for the public repo
+PROGRESS.md

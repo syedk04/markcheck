@@ -1,0 +1,15 @@
+numpy==1.26.4
+pillow==12.3.0
+torch==2.4.1
+torchvision==0.19.1
+transformers==4.44.2
+scikit-learn==1.5.2
+opencv-python-headless==5.0.0.93
+pyarrow==25.0.1
+huggingface-hub==0.25.1
+rembg==2.0.83
+onnxruntime==1.29.0
+# rembg's own metadata asks for numpy>=2.3; pinned numpy 1.26.4 above is required
+# for tensorflow/transformers compatibility instead, and rembg's onnx inference
+# path works fine against it in practice. rembg is only used via the optional
+# remove_background_rembg() codepath in preprocess.py, not the default pipeline.

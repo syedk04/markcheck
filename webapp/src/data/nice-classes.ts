@@ -1,0 +1,55 @@
+export interface NiceClass {
+  number: number
+  label: string
+}
+
+// The 45-class Nice Classification (10th edition) used internationally to
+// group goods (1-34) and services (35-45) for trademark registration.
+// Labels here are short human-readable summaries, not the full legal text.
+export const NICE_CLASSES: NiceClass[] = [
+  { number: 1, label: 'Class 1 — Chemicals for industry and science' },
+  { number: 2, label: 'Class 2 — Paints, varnishes, coatings' },
+  { number: 3, label: 'Class 3 — Cosmetics and cleaning preparations' },
+  { number: 4, label: 'Class 4 — Industrial oils, fuels, candles' },
+  { number: 5, label: 'Class 5 — Pharmaceuticals and medical preparations' },
+  { number: 6, label: 'Class 6 — Common metals and hardware' },
+  { number: 7, label: 'Class 7 — Machines and machine tools' },
+  { number: 8, label: 'Class 8 — Hand tools and implements' },
+  { number: 9, label: 'Class 9 — Computers, software, electronics' },
+  { number: 10, label: 'Class 10 — Medical and surgical instruments' },
+  { number: 11, label: 'Class 11 — Lighting, heating, cooking appliances' },
+  { number: 12, label: 'Class 12 — Vehicles and apparatus for locomotion' },
+  { number: 13, label: 'Class 13 — Firearms and fireworks' },
+  { number: 14, label: 'Class 14 — Jewelry, precious metals, watches' },
+  { number: 15, label: 'Class 15 — Musical instruments' },
+  { number: 16, label: 'Class 16 — Paper goods and printed matter' },
+  { number: 17, label: 'Class 17 — Rubber, plastics, insulating materials' },
+  { number: 18, label: 'Class 18 — Leather goods, bags, luggage' },
+  { number: 19, label: 'Class 19 — Non-metallic building materials' },
+  { number: 20, label: 'Class 20 — Furniture and furnishings' },
+  { number: 21, label: 'Class 21 — Household and kitchen utensils' },
+  { number: 22, label: 'Class 22 — Ropes, nets, tents, sails' },
+  { number: 23, label: 'Class 23 — Yarns and threads' },
+  { number: 24, label: 'Class 24 — Textiles and fabrics' },
+  { number: 25, label: 'Class 25 — Clothing, footwear, headgear' },
+  { number: 26, label: 'Class 26 — Lace, ribbons, buttons, sewing notions' },
+  { number: 27, label: 'Class 27 — Carpets, rugs, wall hangings' },
+  { number: 28, label: 'Class 28 — Games, toys, sporting goods' },
+  { number: 29, label: 'Class 29 — Meat, fish, processed foods' },
+  { number: 30, label: 'Class 30 — Coffee, bread, confectionery, staples' },
+  { number: 31, label: 'Class 31 — Fresh produce, live animals, plants' },
+  { number: 32, label: 'Class 32 — Beers and non-alcoholic beverages' },
+  { number: 33, label: 'Class 33 — Wines and spirits' },
+  { number: 34, label: 'Class 34 — Tobacco and smokers articles' },
+  { number: 35, label: 'Class 35 — Advertising and business management' },
+  { number: 36, label: 'Class 36 — Insurance and financial services' },
+  { number: 37, label: 'Class 37 — Construction and repair services' },
+  { number: 38, label: 'Class 38 — Telecommunications' },
+  { number: 39, label: 'Class 39 — Transport and travel services' },
+  { number: 40, label: 'Class 40 — Material treatment services' },
+  { number: 41, label: 'Class 41 — Education and entertainment services' },
+  { number: 42, label: 'Class 42 — Scientific and technology services' },
+  { number: 43, label: 'Class 43 — Food, drink, and accommodation services' },
+  { number: 44, label: 'Class 44 — Medical, beauty, and agricultural services' },
+  { number: 45, label: 'Class 45 — Legal and personal services' },
+]
