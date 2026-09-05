@@ -12,9 +12,20 @@ dist
 dist-ssr
 *.local
 
-# Corpus data is produced by the data pipeline (or the placeholder generator
-# for local dev); neither belongs in version control.
-public/data/
+# Corpus data (public/data/) is produced by the data pipeline (or the
+# placeholder generator for local dev). It IS committed to version control
+# (deliberately not gitignored) because the GitHub Actions Pages workflow
+# (.github/workflows/deploy.yml) builds from a fresh `git checkout` on every
+# push and has no other way to obtain it -- there is no CI step that reruns
+# the multi-hour embedding pipeline. This is a considered exception: the
+# corpus is synthetic (iamkaikai/amazing_logos_v2, see docs/DATASET.md) and
+# its public deployment -- with prominent disclosure that it is not real
+# trademark data -- has been explicitly decided as acceptable. Only the
+# already-quantized/derived artifacts (index.bin, metadata.json,
+# model_params.json, thumbnails/*.jpg) are committed here; the raw corpus
+# download and full-precision intermediate embeddings
+# (data-pipeline/raw/, data-pipeline/embeddings/) remain excluded via the
+# root .gitignore and are never committed.
 
 # Editor directories and files
 .vscode/*

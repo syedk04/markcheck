@@ -124,11 +124,15 @@ export class SearchWorkerClient {
     return this.readyPromise
   }
 
-  search(queryRecord: Record<ChannelName, Int8Array>, topK: number): Promise<MatchResult[]> {
+  search(
+    queryRecord: Record<ChannelName, Int8Array>,
+    topK: number,
+    excludeChannels?: ChannelName[],
+  ): Promise<MatchResult[]> {
     const requestId = makeRequestId()
     return new Promise((resolve, reject) => {
       this.pending.set(requestId, { resolve: (v) => resolve((v as any).matches), reject })
-      this.worker.postMessage({ type: 'search', requestId, queryRecord, topK })
+      this.worker.postMessage({ type: 'search', requestId, queryRecord, topK, excludeChannels })
     })
   }
 

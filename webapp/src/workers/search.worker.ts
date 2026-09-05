@@ -15,6 +15,7 @@ type WorkerRequest =
       requestId: string
       queryRecord: Record<ChannelName, Int8Array>
       topK: number
+      excludeChannels?: ChannelName[]
     }
 
 self.onmessage = async (event: MessageEvent<WorkerRequest>) => {
@@ -28,7 +29,7 @@ self.onmessage = async (event: MessageEvent<WorkerRequest>) => {
     }
     if (msg.type === 'search') {
       if (!corpus || !params) throw new Error('search worker used before init')
-      const matches = search(corpus, params, msg.queryRecord, msg.topK)
+      const matches = search(corpus, params, msg.queryRecord, msg.topK, msg.excludeChannels)
       ;(self as unknown as Worker).postMessage({ type: 'searchResult', requestId: msg.requestId, matches })
     }
   } catch (err) {
@@ -46,8 +47,10 @@ function search(
   params: ModelParams,
   queryRecord: Record<ChannelName, Int8Array>,
   topK: number,
+  excludeChannels?: ChannelName[],
 ): MatchResult[] {
-  const channels = params.record_order
+  const excluded = new Set(excludeChannels ?? [])
+  const channels = params.record_order.filter((c) => !excluded.has(c))
   const queryFloat: Record<ChannelName, Float64Array> = {} as Record<ChannelName, Float64Array>
   for (const channel of channels) {
     queryFloat[channel] = dequantizeVector(queryRecord[channel], params.channels[channel])

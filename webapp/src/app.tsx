@@ -98,7 +98,11 @@ export function App() {
           const embedResult = await embedClient.embedQuery(bitmap)
 
           setJobs((prev) => prev.map((j) => (j.id === job.id ? { ...j, status: 'searching' } : j)))
-          const matches = await searchClient.search(embedResult.record, TOP_K)
+          const matches = await searchClient.search(
+            embedResult.record,
+            TOP_K,
+            embedResult.fourierOk ? undefined : ['fourier'],
+          )
 
           const results = matches.map((match) => {
             const overlap =

@@ -1,0 +1,98 @@
+{
+ "k": 10,
+ "weights": {
+  "dino_color": 0.65,
+  "dino_grey": 0.15,
+  "clip": 0.15,
+  "fourier": 0.05
+ },
+ "overall_agreement": 0.3664041994750656,
+ "n_queries": 381,
+ "per_tag": {
+  "circle": {
+   "mean_agreement": 0.5872000000000002,
+   "n": 125
+  },
+  "lines": {
+   "mean_agreement": 0.3159090909090909,
+   "n": 88
+  },
+  "square": {
+   "mean_agreement": 0.3961538461538462,
+   "n": 52
+  },
+  "symmetrical": {
+   "mean_agreement": 0.06666666666666667,
+   "n": 3
+  },
+  "outline": {
+   "mean_agreement": 0.125,
+   "n": 12
+  },
+  "cross": {
+   "mean_agreement": 0.1125,
+   "n": 8
+  },
+  "triangle": {
+   "mean_agreement": 0.24375,
+   "n": 16
+  },
+  "letters": {
+   "mean_agreement": 0.20322580645161292,
+   "n": 31
+  },
+  "dots": {
+   "mean_agreement": 0.21538461538461537,
+   "n": 13
+  },
+  "asymmetrical": {
+   "mean_agreement": 0.08333333333333333,
+   "n": 6
+  },
+  "hexagon": {
+   "mean_agreement": 0.08,
+   "n": 5
+  },
+  "spiral": {
+   "mean_agreement": 0.09999999999999999,
+   "n": 3
+  },
+  "star": {
+   "mean_agreement": 0.05,
+   "n": 4
+  },
+  "figurative": {
+   "mean_agreement": 0.0,
+   "n": 2
+  },
+  "squares": {
+   "mean_agreement": 0.06666666666666667,
+   "n": 6
+  },
+  "animals": {
+   "mean_agreement": 0.1,
+   "n": 2
+  },
+  "stars": {
+   "mean_agreement": 0.1,
+   "n": 1
+  },
+  "waves": {
+   "mean_agreement": 0.0,
+   "n": 1
+  },
+  "rectangles": {
+   "mean_agreement": 0.1,
+   "n": 1
+  },
+  "diamond": {
+   "mean_agreement": 0.0,
+   "n": 1
+  },
+  "concentric": {
+   "mean_agreement": 0.0,
+   "n": 1
+  }
+ },
+ "label_source": "shape_tag (prompt keyword, substitute for Vienna code -- see module docstring)"
+}
