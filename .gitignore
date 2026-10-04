@@ -29,3 +29,16 @@ Thumbs.db
 
 # Local-only planning notes, not for the public repo
 PROGRESS.md
+
+# Local editor and assistant config, never committed
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+GEMINI.md
+.cursor/
+.cursorrules
+.windsurfrules
+.aider*
+.continue/
+.coderabbit.yaml
